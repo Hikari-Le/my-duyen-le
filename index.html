@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CaraBrows - Phun Xăm Thẩm Mỹ Mỹ Duyên Lê</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#D4AF37',
+                        'gold-light': '#F3E5AB',
+                        primary: '#1a1a1a',
+                        secondary: '#f9f9f9'
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garmond"', 'serif'],
+                        sans: ['"Montserrat"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/cover-photo.png');
+            background-size: cover;
+            background-position: center;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        /* Mobile Optimizations for iPhone 13+ */
+        @media (max-width: 768px) {
+            /* Responsive logo */
+            nav .font-serif {
+                font-size: 1.25rem !important; /* Smaller on mobile */
+            }
+            
+            /* Hero section optimization */
+            .hero-bg h2 {
+                font-size: 1.25rem !important;
+                line-height: 1.5 !important;
+            }
+            .hero-bg h1 {
+                font-size: 2.5rem !important;
+                line-height: 1.2 !important;
+            }
+            .hero-bg p {
+                font-size: 1rem !important;
+                line-height: 1.6 !important;
+            }
+            
+            /* Touch-friendly buttons - minimum 44x44px tap target */
+            .hero-bg button,
+            .hero-bg a {
+                min-height: 56px !important;
+                padding: 14px 24px !important;
+                font-size: 0.9rem !important;
+            }
+            
+            /* Better mobile spacing */
+            section {
+                padding-top: 3rem !important;
+                padding-bottom: 3rem !important;
+            }
+            
+            /* Gallery optimization */
+            .aspect-square img {
+                object-fit: cover;
+            }
+            
+            /* Contact cards better spacing */
+            .grid.grid-cols-1 {
+                gap: 1rem !important;
+            }
+        }
+        
+        /* iPhone 13 Pro Max specific (428px width) */
+        @media (min-width: 390px) and (max-width: 430px) {
+            .hero-bg {
+                min-height: 100vh;
+                background-attachment: scroll; /* Better performance on mobile */
+            }
+        }
+    </style>
+</head>
+<body class="font-sans text-primary antialiased">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <span class="font-serif text-3xl font-bold text-gold tracking-wider">CaraBrows Mỹ Duyên Lê</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-gold transition duration-300">Trang chủ</a>
+                    <a href="#about" class="text-gray-700 hover:text-gold transition duration-300">Giới thiệu</a>
+                    <a href="#services" class="text-gray-700 hover:text-gold transition duration-300">Dịch vụ</a>
+                    <a href="#gallery" class="text-gray-700 hover:text-gold transition duration-300">Hình ảnh</a>
+                    <a href="#contact" class="bg-gold text-white px-6 py-2 rounded-full hover:bg-yellow-600 transition duration-300">Đặt lịch ngay</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-700 hover:text-gold focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg h-screen flex items-center justify-center text-center px-4">
+        <div class="max-w-4xl mx-auto text-white">
+            <h2 class="font-serif text-2xl md:text-4xl mb-4 tracking-widest uppercase">Phun Xăm Thẩm Mỹ Chuyên Nghiệp</h2>
+            <h1 class="font-serif text-5xl md:text-7xl font-bold mb-6 text-gold-light">Vẻ Đẹp Tự Nhiên Hoàn Hảo</h1>
+            <p class="text-lg md:text-xl mb-10 font-light max-w-2xl mx-auto">Nâng tầm nhan sắc với công nghệ phun xăm hiện đại nhất từ CaraBrows - Mỹ Duyên Lê. Đẹp ngay sau khi làm, không sưng đau.</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <button onclick="alert('Hãy gọi đến số điện thoại +84 905 264 308 để trao đổi trực tiếp!')" class="bg-gold text-white px-8 py-4 rounded-full text-base font-semibold hover:bg-yellow-600 transition duration-300 uppercase tracking-wide cursor-pointer">
+                  📞 Liên hệ:<br>+84 905 264 308</button>
+                <a href="https://m.me/PhunXamThamMy.CaraBrows.MyDuyenLe" target="_blank" class="bg-gold text-white px-8 py-4 rounded-full text-base font-semibold hover:bg-yellow-600 transition duration-300 uppercase tracking-wide">
+                  💬 Nhắn tin<br>Fanpage</a>
+                <a href="https://www.facebook.com/PhunXamThamMy.CaraBrows.MyDuyenLe/" target="_blank" class="bg-gold text-white px-8 py-4 rounded-full text-base font-semibold hover:bg-yellow-600 transition duration-300 uppercase tracking-wide">
+                  👉 Xem Facebook<br>Fanpage</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <!-- Placeholder for Owner Image -->
+                    <img src="images/brand-photo.png" alt="Mỹ Duyên Lê - CaraBrows" class="rounded-lg shadow-xl w-full object-cover h-[500px]">
+                    <div class="absolute -bottom-6 -right-6 bg-gold p-8 rounded-lg shadow-lg hidden md:block">
+                        <p class="text-white font-serif text-4xl font-bold">5+</p>
+                        <p class="text-white text-sm uppercase tracking-wide">Năm kinh nghiệm</p>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-gold font-bold uppercase tracking-widest mb-2">Về chúng tôi</h3>
+                    <h2 class="font-serif text-4xl font-bold mb-6">Mỹ Duyên Lê - CaraBrows</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Chào mừng bạn đến với CaraBrows. Với niềm đam mê cái đẹp và sự tỉ mỉ trong từng đường kim, chúng tôi cam kết mang lại vẻ đẹp tự nhiên, hài hòa nhất cho khuôn mặt của bạn.
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-check-circle text-gold mr-3"></i> Công nghệ phun xăm Châu Âu hiện đại
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-check-circle text-gold mr-3"></i> Mực hữu cơ an toàn tuyệt đối
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-check-circle text-gold mr-3"></i> Dụng cụ vô trùng, riêng biệt cho từng khách
+                        </li>
+                    </ul>
+                    <div class="mb-6 text-gray-700 space-y-2">
+                        <p>⏰ Giờ mở cửa: 9h00 – 18h00</p>
+                        <p>☎ Hotline: 0905264308</p>
+                        <p>📍 Địa chỉ: 331/8 Hùng Vương, Quận Thanh Khê, TP Đà Nẵng</p>
+                    </div>
+                    <img src="images/signature.png" alt="Signature" class="h-16">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-secondary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="text-gold font-bold uppercase tracking-widest mb-2">Dịch vụ của chúng tôi</h3>
+                <h2 class="font-serif text-4xl font-bold">Giải Pháp Làm Đẹp Toàn Diện</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-sm transition duration-300 text-center">
+                    <div class="w-16 h-16 bg-gold-light rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-eye text-gold text-2xl"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold mb-4">Phun Mày Ombre/Hairstroke</h3>
+                    <p class="text-gray-600 mb-6">Tạo dáng mày phong thủy, sợi siêu thực tự nhiên như thật, khắc phục mọi khuyết điểm lông mày thưa, nhạt.</p>
+                    <a href="#contact" class="text-gold font-semibold hover:underline">Chi tiết <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+                <!-- Service 2 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-sm transition duration-300 text-center">
+                    <div class="w-16 h-16 bg-gold-light rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-kiss text-gold text-2xl"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold mb-4">Phun Môi Collagen</h3>
+                    <p class="text-gray-600 mb-6">Khử thâm môi, phủ màu collagen tươi tắn, giúp đôi môi căng mọng quyến rũ mà không cần son phấn.</p>
+                    <a href="#contact" class="text-gold font-semibold hover:underline">Chi tiết <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+                <!-- Service 3 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-sm transition duration-300 text-center">
+                    <div class="w-16 h-16 bg-gold-light rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-magic text-gold text-2xl"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold mb-4">Điêu Khắc & Xử Lý</h3>
+                    <p class="text-gray-600 mb-6">Xử lý mày/môi hỏng, trổ xanh trổ đỏ. Điêu khắc sợi 6D/9D mang lại vẻ đẹp sắc sảo.</p>
+                    <a href="#contact" class="text-gold font-semibold hover:underline">Chi tiết <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section (Placeholder for FB Images) -->
+    <section id="gallery" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="text-gold font-bold uppercase tracking-widest mb-2">Thư viện ảnh</h3>
+                <h2 class="font-serif text-4xl font-bold">Khách Hàng Thực Tế</h2>
+                <p class="mt-4 text-gray-500">Hình ảnh thực tế từ Fanpage CaraBrows</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="aspect-square overflow-hidden rounded-lg">
+                    <img src="images/01-khuyen-mai.png" alt="Khuyến mãi CaraBrows" class="w-full h-full object-cover hover:scale-110 transition duration-500 cursor-pointer">
+                </div>
+                <div class="aspect-square overflow-hidden rounded-lg">
+                    <img src="images/02-may-01.png" alt="Phun mày" class="w-full h-full object-cover hover:scale-110 transition duration-500 cursor-pointer">
+                </div>
+                <div class="aspect-square overflow-hidden rounded-lg">
+                    <img src="images/03-mi-02.png" alt="Phun mi" class="w-full h-full object-cover hover:scale-110 transition duration-500 cursor-pointer">
+                </div>
+                <div class="aspect-square overflow-hidden rounded-lg">
+                    <img src="images/04-moi-04.png" alt="Phun môi" class="w-full h-full object-cover hover:scale-110 transition duration-500 cursor-pointer">
+                </div>
+            </div>
+            <div class="text-center mt-10">
+                <a href="https://www.facebook.com/PhunXamThamMy.CaraBrows.MyDuyenLe/" target="_blank" class="text-gold font-bold hover:text-primary transition duration-300 border-b-2 border-gold pb-1">Xem thêm tại Facebook</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA / Contact Section -->
+    <section id="contact" class="py-20 bg-primary text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+        <div class="max-w-4xl mx-auto px-4 relative z-10 text-center">
+            <h2 class="font-serif text-4xl font-bold mb-6 text-gold">Đặt Lịch Làm Đẹp Ngay Hôm Nay</h2>
+            <p class="text-gray-300 mb-10 text-lg">Đừng bỏ lỡ cơ hội sở hữu vẻ đẹp hoàn hảo. Liên hệ với chúng tôi để được tư vấn dáng mày, màu môi phù hợp nhất.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="p-6 border border-gray-700 rounded-lg">
+                    <i class="fab fa-facebook-messenger text-4xl text-gold mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2">Messenger</h4>
+                    <p class="text-gray-400 text-sm mb-4">Chat trực tiếp để tư vấn</p>
+                    <a href="https://m.me/PhunXamThamMy.CaraBrows.MyDuyenLe" target="_blank" class="text-gold hover:text-white">Gửi tin nhắn</a>
+                </div>
+                <div class="p-6 border border-gray-700 rounded-lg">
+                    <i class="fas fa-phone-alt text-4xl text-gold mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2">Hotline / Zalo</h4>
+                    <p class="text-gray-400 text-sm mb-4">Hỗ trợ 9:00 - 21:00</p>
+                    <a href="tel:+84905264308" class="text-gold hover:text-white">+84 905 264 308</a>
+                </div>
+                <div class="p-6 border border-gray-700 rounded-lg">
+                    <i class="fas fa-map-marker-alt text-4xl text-gold mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2">Địa chỉ</h4>
+                    <p class="text-gray-400 text-sm mb-4">Ghé thăm Studio</p>
+                    <span class="text-gold">📍 331/8 Hùng Vương<br>Quận Thanh Khê, TP Đà Nẵng</span>
+                </div>
+            </div>
+
+            <footer class="border-t border-gray-800 pt-8">
+                <p class="text-gray-500 text-sm">&copy; 2026 CaraBrows - My Duyen Le. All Rights Reserved.</p>
+                <p class="text-gray-600 text-xs mt-2">Designed by Hikari Le Space</p>
+            </footer>
+        </div>
+    </section>
+
+    <!-- Smooth Scroll Script -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

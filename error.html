@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lỗi - CaraBrows Mỹ Duyên Lê</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#D4AF37',
+                        'gold-light': '#F3E5AB',
+                        primary: '#1a1a1a',
+                        secondary: '#f9f9f9'
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garmond"', 'serif'],
+                        sans: ['"Montserrat"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .error-bg {
+            background: linear-gradient(135deg, #1a1a1a 0%, #3a3a3a 100%);
+            min-height: 100vh;
+        }
+        
+        .glow {
+            text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        /* Mobile Optimizations */
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 5rem !important;
+            }
+            .error-title {
+                font-size: 1.75rem !important;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans text-primary antialiased">
+
+    <div class="error-bg flex items-center justify-center px-4">
+        <div class="max-w-2xl mx-auto text-center py-20">
+            <!-- Logo -->
+            <div class="mb-8">
+                <h1 class="font-serif text-3xl md:text-4xl font-bold text-gold tracking-wider">
+                    CaraBrows Mỹ Duyên Lê
+                </h1>
+            </div>
+
+            <!-- Error Icon -->
+            <div class="float-animation mb-8">
+                <i class="fas fa-exclamation-triangle text-gold text-6xl md:text-8xl glow"></i>
+            </div>
+
+            <!-- Error Code -->
+            <h2 class="error-code font-serif text-7xl md:text-9xl font-bold text-gold-light mb-4 glow">
+                404
+            </h2>
+
+            <!-- Error Message -->
+            <h3 class="error-title font-serif text-2xl md:text-3xl font-semibold text-white mb-4">
+                Oops! Trang Không Tìm Thấy
+            </h3>
+            
+            <p class="text-gray-300 text-base md:text-lg mb-10 max-w-md mx-auto leading-relaxed">
+                Xin lỗi, trang bạn đang tìm kiếm không tồn tại hoặc đã bị di chuyển. 
+                Hãy quay về trang chủ để khám phá các dịch vụ làm đẹp của chúng tôi.
+            </p>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-col sm:flex-row justify-center gap-4 mb-12">
+                <a href="index.html" class="bg-gold text-white px-8 py-4 rounded-full text-base font-semibold hover:bg-yellow-600 transition duration-300 uppercase tracking-wide inline-flex items-center justify-center">
+                    <i class="fas fa-home mr-2"></i> Về Trang Chủ
+                </a>
+                <a href="tel:+84905264308" class="bg-transparent border-2 border-gold text-gold px-8 py-4 rounded-full text-base font-semibold hover:bg-gold hover:text-white transition duration-300 uppercase tracking-wide inline-flex items-center justify-center">
+                    <i class="fas fa-phone mr-2"></i> Liên Hệ Ngay
+                </a>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="border-t border-gray-700 pt-8">
+                <p class="text-gray-400 text-sm mb-3">Cần hỗ trợ? Liên hệ với chúng tôi:</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4 text-sm text-gray-300">
+                    <div class="flex items-center justify-center">
+                        <i class="fas fa-phone-alt text-gold mr-2"></i>
+                        <span>0905 264 308</span>
+                    </div>
+                    <div class="hidden sm:block text-gray-600">|</div>
+                    <div class="flex items-center justify-center">
+                        <i class="fas fa-map-marker-alt text-gold mr-2"></i>
+                        <span>331/8 Hùng Vương, Thanh Khê, Đà Nẵng</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="mt-12 pt-6 border-t border-gray-700">
+                <p class="text-gray-500 text-xs">
+                    © 2026 CaraBrows - My Duyen Le. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
